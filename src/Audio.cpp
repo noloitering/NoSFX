@@ -64,14 +64,14 @@ void AudioManager::play(std::shared_ptr< Sound > sound)
 {
 	SetSoundVolume(*(sound), volume.sfx);
 	SetSoundPitch(*(sound), pitches.sfx);
-	PlaySoundMulti(*(sound));
+	PlaySound(*(sound));
 }
 
 void AudioManager::play(std::shared_ptr< Sound > sound, float vol, float pitch)
 {
 	SetSoundVolume(*(sound), vol);
 	SetSoundPitch(*(sound), pitch);
-	PlaySoundMulti(*(sound));
+	PlaySound(*(sound));
 }
 
 void AudioManager::stream(std::shared_ptr< Music > music, bool loop)
